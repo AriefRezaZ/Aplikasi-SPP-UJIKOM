@@ -1,7 +1,7 @@
 <?php
 require_once 'koneksi.php';
 
-$result = mysqli_query($conn, 'SELECT * FROM tb_pembayaran');
+$result = mysqli_query($conn, "SELECT id_pembayaran, jumlah_bulan, id_spp, kembalian, nominal_bayar, jumlah_bayar FROM tb_pembayaran");
 $queryError = $result === false;
 $columns = $queryError ? [] : mysqli_fetch_fields($result);
 ?>
